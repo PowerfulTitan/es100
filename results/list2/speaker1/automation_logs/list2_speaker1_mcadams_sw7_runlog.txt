@@ -1,0 +1,83 @@
+[2026-03-05 11:36:02] START mcadams sw7
+CMD: C:\Users\adolf\AppData\Local\Programs\Python\Python312\python.exe -u eval_anonymization.py --input_wav audio\list2_speaker1_mcadams_sw7_in.wav --output_wav audio\list2_speaker1_mcadams_sw7_out.wav --impostors_dir impostors --whisper_model base --max_impostors 146
+
+Log file: results\list2_speaker1_mcadams_sw7_metrics.txt
+Device: cpu
+Input WAV:  audio\list2_speaker1_mcadams_sw7_in.wav
+Output WAV: audio\list2_speaker1_mcadams_sw7_out.wav
+Impostors dir: impostors | max_impostors=146
+Whisper model: base
+Chunking: chunk_sec=3.0, hop_sec=0.5
+
+Loading Whisper model 'base'...
+Whisper loaded.
+Transcribing input...
+Transcribing output...
+
+=== ASR TRANSCRIPTS ===
+[input ASR]  The boy was there when the sun rose. A rod is used to catch pink salmon. The source of the huge river is the clear spring. Kick the ball straight and follow through. Help the woman get back to her feet. A pot of tea helps to pass the evening. Smokey fires lack flame and heat. The soft cushion broke the manslaughter. The salt breeze came across from the sea. The girl at the booth sold 50 bonds.
+[output ASR] The boy was there when the sun rose. A rod is used to catch King's damon. The source of the huge river is the fierce spring. Take the ball straight and follow through. Help the woman get back to her feet. A pot of tea helps to pass the evening. Smokey fires, lack flame and heat. The soft cushion broke the mantle. The salt freeze came across from the sea. The girl at the boot sold 50 bonds.
+
+=== WER BREAKDOWN ===
+WER = (S + D + I) / N, where N = #words in reference
+S (substitutions): 7
+D (deletions):     0
+I (insertions):    0
+N (ref words):     78
+WER = (7 + 0 + 0) / 78 = 0.0897
+
+Loading speaker embedding model (SpeechBrain ECAPA)...
+C:\Users\adolf\AppData\Local\Programs\Python\Python312\Lib\site-packages\speechbrain\utils\autocast.py:188: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  wrapped_fwd = torch.cuda.amp.custom_fwd(fwd, cast_inputs=cast_inputs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Speaker model loaded.
+Loading + chunking input/output audio for embeddings...
+Input chunks: 85 | Output chunks: 85
+Embedding input chunks (enrollment + baseline)...
+Embedding output chunks (anon scores)...
+Embedding 146 impostor files...
+  impostors: 10/146
+  impostors: 20/146
+  impostors: 30/146
+  impostors: 40/146
+  impostors: 50/146
+  impostors: 60/146
+  impostors: 70/146
+  impostors: 80/146
+  impostors: 90/146
+  impostors: 100/146
+  impostors: 110/146
+  impostors: 120/146
+  impostors: 130/146
+  impostors: 140/146
+  impostors: 146/146
+
+=== SCORE STATISTICS (cosine similarity) ===
+Baseline genuine: n=85, mean=0.6407, std=0.1894, min=0.0934, max=0.8093
+Anon genuine:     n=85, mean=0.3414, std=0.1269, min=0.0299, max=0.5219
+Impostor:         n=146, mean=0.1023, std=0.0831, min=-0.0975, max=0.3340
+
+Computing EER (threshold sweep)...
+
+=== BASELINE (input vs input) EER DETAILS ===
+Chosen threshold t*: 0.2365
+Genuine trials N:    85
+Impostor trials M:   146
+False rejects:       8  -> FRR = 9.41%
+False accepts:       14  -> FAR = 9.59%
+|FAR - FRR|:         0.18%
+EER = (FAR + FRR)/2  = (9.59% + 9.41%)/2 = 9.50%
+
+=== ANON (input vs output) EER DETAILS ===
+Chosen threshold t*: 0.1908
+Genuine trials N:    85
+Impostor trials M:   146
+False rejects:       11  -> FRR = 12.94%
+False accepts:       19  -> FAR = 13.01%
+|FAR - FRR|:         0.07%
+EER = (FAR + FRR)/2  = (13.01% + 12.94%)/2 = 12.98%
+
+Done.
+Saved results to: results\list2_speaker1_mcadams_sw7_metrics.txt
+
+[2026-03-05 11:40:55] DONE after 292.3s. (exit_code=0)

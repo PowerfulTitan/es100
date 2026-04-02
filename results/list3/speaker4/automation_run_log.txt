@@ -1,0 +1,197 @@
+[2026-03-07 23:51:47] === Automation run starting ===
+[2026-03-07 23:51:47] Config: list3, speaker4, switches sw3..sw15
+[2026-03-07 23:51:47] Parallelism: MAX_PARALLEL=2, TIMEOUT_SEC=1200
+[2026-03-07 23:51:47] Fixed args: impostors_dir=impostors, whisper_model=base, max_impostors=146
+[2026-03-07 23:51:47] 
+[2026-03-07 23:51:47] Planned jobs (method x switch): 91
+[2026-03-07 23:51:47] 
+[2026-03-07 23:51:47] START: pitch sw3 | runlog=results\automation_logs\list3_speaker4_pitch_sw3_runlog.txt
+[2026-03-07 23:51:47] START: pitch sw4 | runlog=results\automation_logs\list3_speaker4_pitch_sw4_runlog.txt
+[2026-03-08 00:11:50] TIMEOUT: pitch sw3 | 1202.8s (killed at 1200.7s)
+[2026-03-08 00:11:52] TIMEOUT: pitch sw4 | 1204.9s (killed at 1202.9s)
+[2026-03-08 00:11:52] START: pitch sw5 | runlog=results\automation_logs\list3_speaker4_pitch_sw5_runlog.txt
+[2026-03-08 00:11:52] START: pitch sw6 | runlog=results\automation_logs\list3_speaker4_pitch_sw6_runlog.txt
+[2026-03-08 00:31:55] TIMEOUT: pitch sw5 | 1203.3s (killed at 1201.3s)
+[2026-03-08 00:31:57] TIMEOUT: pitch sw6 | 1205.3s (killed at 1203.3s)
+[2026-03-08 00:31:57] START: pitch sw7 | runlog=results\automation_logs\list3_speaker4_pitch_sw7_runlog.txt
+[2026-03-08 00:31:57] START: pitch sw8 | runlog=results\automation_logs\list3_speaker4_pitch_sw8_runlog.txt
+[2026-03-08 00:51:59] TIMEOUT: pitch sw7 | 1202.2s (killed at 1200.2s)
+[2026-03-08 00:52:02] TIMEOUT: pitch sw8 | 1204.2s (killed at 1202.2s)
+[2026-03-08 00:52:02] START: pitch sw9 | runlog=results\automation_logs\list3_speaker4_pitch_sw9_runlog.txt
+[2026-03-08 00:52:02] START: pitch sw10 | runlog=results\automation_logs\list3_speaker4_pitch_sw10_runlog.txt
+[2026-03-08 01:12:04] TIMEOUT: pitch sw9 | 1202.7s (killed at 1200.7s)
+[2026-03-08 01:12:09] TIMEOUT: pitch sw10 | 1207.4s (killed at 1205.4s)
+[2026-03-08 01:12:09] START: pitch sw11 | runlog=results\automation_logs\list3_speaker4_pitch_sw11_runlog.txt
+[2026-03-08 01:12:09] START: pitch sw12 | runlog=results\automation_logs\list3_speaker4_pitch_sw12_runlog.txt
+[2026-03-08 01:26:01] DONE: pitch sw11 | 832.3s (exit_code=0)
+[2026-03-08 01:26:01] DONE: pitch sw12 | 832.3s (exit_code=0)
+[2026-03-08 01:26:01] START: pitch sw13 | runlog=results\automation_logs\list3_speaker4_pitch_sw13_runlog.txt
+[2026-03-08 01:26:01] START: pitch sw14 | runlog=results\automation_logs\list3_speaker4_pitch_sw14_runlog.txt
+[2026-03-08 01:39:17] DONE: pitch sw14 | 795.3s (exit_code=0)
+[2026-03-08 01:39:17] START: pitch sw15 | runlog=results\automation_logs\list3_speaker4_pitch_sw15_runlog.txt
+[2026-03-08 01:39:21] DONE: pitch sw13 | 799.4s (exit_code=0)
+[2026-03-08 01:39:21] START: formant sw3 | runlog=results\automation_logs\list3_speaker4_formant_sw3_runlog.txt
+[2026-03-08 01:50:43] DONE: pitch sw15 | 686.1s (exit_code=0)
+[2026-03-08 01:50:43] START: formant sw4 | runlog=results\automation_logs\list3_speaker4_formant_sw4_runlog.txt
+[2026-03-08 01:50:47] DONE: formant sw3 | 686.3s (exit_code=0)
+[2026-03-08 01:50:47] START: formant sw5 | runlog=results\automation_logs\list3_speaker4_formant_sw5_runlog.txt
+[2026-03-08 03:00:49] DONE: formant sw4 | 606.1s (exit_code=0)
+[2026-03-08 03:00:49] START: formant sw6 | runlog=results\automation_logs\list3_speaker4_formant_sw6_runlog.txt
+[2026-03-08 03:00:59] DONE: formant sw5 | 612.2s (exit_code=0)
+[2026-03-08 03:00:59] START: formant sw7 | runlog=results\automation_logs\list3_speaker4_formant_sw7_runlog.txt
+[2026-03-08 03:11:45] DONE: formant sw6 | 656.1s (exit_code=0)
+[2026-03-08 03:11:45] START: formant sw8 | runlog=results\automation_logs\list3_speaker4_formant_sw8_runlog.txt
+[2026-03-08 03:11:58] DONE: formant sw7 | 658.3s (exit_code=0)
+[2026-03-08 03:11:58] START: formant sw9 | runlog=results\automation_logs\list3_speaker4_formant_sw9_runlog.txt
+[2026-03-08 03:21:55] DONE: formant sw8 | 610.0s (exit_code=0)
+[2026-03-08 03:21:55] START: formant sw10 | runlog=results\automation_logs\list3_speaker4_formant_sw10_runlog.txt
+[2026-03-08 03:22:08] DONE: formant sw9 | 610.0s (exit_code=0)
+[2026-03-08 03:22:08] START: formant sw11 | runlog=results\automation_logs\list3_speaker4_formant_sw11_runlog.txt
+[2026-03-08 03:31:49] DONE: formant sw10 | 593.5s (exit_code=0)
+[2026-03-08 03:31:49] START: formant sw12 | runlog=results\automation_logs\list3_speaker4_formant_sw12_runlog.txt
+[2026-03-08 03:32:11] DONE: formant sw11 | 603.5s (exit_code=0)
+[2026-03-08 03:32:12] START: formant sw13 | runlog=results\automation_logs\list3_speaker4_formant_sw13_runlog.txt
+[2026-03-08 03:41:38] DONE: formant sw12 | 589.4s (exit_code=0)
+[2026-03-08 03:41:38] START: formant sw14 | runlog=results\automation_logs\list3_speaker4_formant_sw14_runlog.txt
+[2026-03-08 03:42:15] DONE: formant sw13 | 602.5s (exit_code=0)
+[2026-03-08 03:42:15] START: formant sw15 | runlog=results\automation_logs\list3_speaker4_formant_sw15_runlog.txt
+[2026-03-08 03:51:43] DONE: formant sw14 | 604.2s (exit_code=0)
+[2026-03-08 03:51:43] START: mcadams sw3 | runlog=results\automation_logs\list3_speaker4_mcadams_sw3_runlog.txt
+[2026-03-08 03:52:13] DONE: formant sw15 | 597.9s (exit_code=0)
+[2026-03-08 03:52:13] START: mcadams sw4 | runlog=results\automation_logs\list3_speaker4_mcadams_sw4_runlog.txt
+[2026-03-08 04:01:50] DONE: mcadams sw3 | 607.6s (exit_code=0)
+[2026-03-08 04:01:50] START: mcadams sw5 | runlog=results\automation_logs\list3_speaker4_mcadams_sw5_runlog.txt
+[2026-03-08 04:02:14] DONE: mcadams sw4 | 601.6s (exit_code=0)
+[2026-03-08 04:02:14] START: mcadams sw6 | runlog=results\automation_logs\list3_speaker4_mcadams_sw6_runlog.txt
+[2026-03-08 04:11:43] DONE: mcadams sw5 | 592.8s (exit_code=0)
+[2026-03-08 04:11:43] START: mcadams sw7 | runlog=results\automation_logs\list3_speaker4_mcadams_sw7_runlog.txt
+[2026-03-08 04:12:16] DONE: mcadams sw6 | 601.4s (exit_code=0)
+[2026-03-08 04:12:16] START: mcadams sw8 | runlog=results\automation_logs\list3_speaker4_mcadams_sw8_runlog.txt
+[2026-03-08 04:21:18] DONE: mcadams sw7 | 574.4s (exit_code=0)
+[2026-03-08 04:21:18] START: mcadams sw9 | runlog=results\automation_logs\list3_speaker4_mcadams_sw9_runlog.txt
+[2026-03-08 04:22:10] DONE: mcadams sw8 | 594.0s (exit_code=0)
+[2026-03-08 04:22:10] START: mcadams sw10 | runlog=results\automation_logs\list3_speaker4_mcadams_sw10_runlog.txt
+[2026-03-08 04:31:42] DONE: mcadams sw9 | 624.1s (exit_code=0)
+[2026-03-08 04:31:42] START: mcadams sw11 | runlog=results\automation_logs\list3_speaker4_mcadams_sw11_runlog.txt
+[2026-03-08 04:32:10] DONE: mcadams sw10 | 600.2s (exit_code=0)
+[2026-03-08 04:32:10] START: mcadams sw12 | runlog=results\automation_logs\list3_speaker4_mcadams_sw12_runlog.txt
+[2026-03-08 04:41:38] DONE: mcadams sw11 | 596.1s (exit_code=0)
+[2026-03-08 04:41:38] START: mcadams sw13 | runlog=results\automation_logs\list3_speaker4_mcadams_sw13_runlog.txt
+[2026-03-08 04:42:12] DONE: mcadams sw12 | 602.2s (exit_code=0)
+[2026-03-08 04:42:12] START: mcadams sw14 | runlog=results\automation_logs\list3_speaker4_mcadams_sw14_runlog.txt
+[2026-03-08 04:51:58] DONE: mcadams sw13 | 620.1s (exit_code=0)
+[2026-03-08 04:51:58] START: mcadams sw15 | runlog=results\automation_logs\list3_speaker4_mcadams_sw15_runlog.txt
+[2026-03-08 04:52:22] DONE: mcadams sw14 | 610.2s (exit_code=0)
+[2026-03-08 04:52:22] START: pitch+formant sw3 | runlog=results\automation_logs\list3_speaker4_pitch+formant_sw3_runlog.txt
+[2026-03-08 04:59:05] DONE: mcadams sw15 | 426.1s (exit_code=0)
+[2026-03-08 04:59:05] START: pitch+formant sw4 | runlog=results\automation_logs\list3_speaker4_pitch+formant_sw4_runlog.txt
+[2026-03-08 04:59:29] DONE: pitch+formant sw3 | 426.1s (exit_code=0)
+[2026-03-08 04:59:29] START: pitch+formant sw5 | runlog=results\automation_logs\list3_speaker4_pitch+formant_sw5_runlog.txt
+[2026-03-08 05:04:05] DONE: pitch+formant sw4 | 300.1s (exit_code=0)
+[2026-03-08 05:04:05] START: pitch+formant sw6 | runlog=results\automation_logs\list3_speaker4_pitch+formant_sw6_runlog.txt
+[2026-03-08 05:04:17] DONE: pitch+formant sw5 | 288.1s (exit_code=0)
+[2026-03-08 05:04:17] START: pitch+formant sw7 | runlog=results\automation_logs\list3_speaker4_pitch+formant_sw7_runlog.txt
+[2026-03-08 05:08:51] DONE: pitch+formant sw6 | 286.3s (exit_code=0)
+[2026-03-08 05:08:51] START: pitch+formant sw8 | runlog=results\automation_logs\list3_speaker4_pitch+formant_sw8_runlog.txt
+[2026-03-08 05:09:05] DONE: pitch+formant sw7 | 288.3s (exit_code=0)
+[2026-03-08 05:09:05] START: pitch+formant sw9 | runlog=results\automation_logs\list3_speaker4_pitch+formant_sw9_runlog.txt
+[2026-03-08 05:13:45] DONE: pitch+formant sw8 | 294.3s (exit_code=0)
+[2026-03-08 05:13:45] START: pitch+formant sw10 | runlog=results\automation_logs\list3_speaker4_pitch+formant_sw10_runlog.txt
+[2026-03-08 05:13:53] DONE: pitch+formant sw9 | 288.3s (exit_code=0)
+[2026-03-08 05:13:53] START: pitch+formant sw11 | runlog=results\automation_logs\list3_speaker4_pitch+formant_sw11_runlog.txt
+[2026-03-08 05:18:38] DONE: pitch+formant sw10 | 292.3s (exit_code=0)
+[2026-03-08 05:18:38] START: pitch+formant sw12 | runlog=results\automation_logs\list3_speaker4_pitch+formant_sw12_runlog.txt
+[2026-03-08 05:18:42] DONE: pitch+formant sw11 | 288.3s (exit_code=0)
+[2026-03-08 05:18:42] START: pitch+formant sw13 | runlog=results\automation_logs\list3_speaker4_pitch+formant_sw13_runlog.txt
+[2026-03-08 05:23:28] DONE: pitch+formant sw12 | 290.4s (exit_code=0)
+[2026-03-08 05:23:28] START: pitch+formant sw14 | runlog=results\automation_logs\list3_speaker4_pitch+formant_sw14_runlog.txt
+[2026-03-08 05:23:30] DONE: pitch+formant sw13 | 288.4s (exit_code=0)
+[2026-03-08 05:23:30] START: pitch+formant sw15 | runlog=results\automation_logs\list3_speaker4_pitch+formant_sw15_runlog.txt
+[2026-03-08 05:28:16] DONE: pitch+formant sw14 | 288.3s (exit_code=0)
+[2026-03-08 05:28:16] START: pitch+mcadams sw3 | runlog=results\automation_logs\list3_speaker4_pitch+mcadams_sw3_runlog.txt
+[2026-03-08 05:28:18] DONE: pitch+formant sw15 | 288.3s (exit_code=0)
+[2026-03-08 05:28:18] START: pitch+mcadams sw4 | runlog=results\automation_logs\list3_speaker4_pitch+mcadams_sw4_runlog.txt
+[2026-03-08 05:33:03] DONE: pitch+mcadams sw3 | 286.3s (exit_code=0)
+[2026-03-08 05:33:03] START: pitch+mcadams sw5 | runlog=results\automation_logs\list3_speaker4_pitch+mcadams_sw5_runlog.txt
+[2026-03-08 05:33:07] DONE: pitch+mcadams sw4 | 288.4s (exit_code=0)
+[2026-03-08 05:33:07] START: pitch+mcadams sw6 | runlog=results\automation_logs\list3_speaker4_pitch+mcadams_sw6_runlog.txt
+[2026-03-08 05:37:51] DONE: pitch+mcadams sw5 | 288.2s (exit_code=0)
+[2026-03-08 05:37:51] START: pitch+mcadams sw7 | runlog=results\automation_logs\list3_speaker4_pitch+mcadams_sw7_runlog.txt
+[2026-03-08 05:37:55] DONE: pitch+mcadams sw6 | 288.2s (exit_code=0)
+[2026-03-08 05:37:55] START: pitch+mcadams sw8 | runlog=results\automation_logs\list3_speaker4_pitch+mcadams_sw8_runlog.txt
+[2026-03-08 05:42:41] DONE: pitch+mcadams sw7 | 290.4s (exit_code=0)
+[2026-03-08 05:42:41] START: pitch+mcadams sw9 | runlog=results\automation_logs\list3_speaker4_pitch+mcadams_sw9_runlog.txt
+[2026-03-08 05:42:43] DONE: pitch+mcadams sw8 | 288.4s (exit_code=0)
+[2026-03-08 05:42:43] START: pitch+mcadams sw10 | runlog=results\automation_logs\list3_speaker4_pitch+mcadams_sw10_runlog.txt
+[2026-03-08 05:47:30] DONE: pitch+mcadams sw9 | 288.3s (exit_code=0)
+[2026-03-08 05:47:30] START: pitch+mcadams sw11 | runlog=results\automation_logs\list3_speaker4_pitch+mcadams_sw11_runlog.txt
+[2026-03-08 05:47:32] DONE: pitch+mcadams sw10 | 288.3s (exit_code=0)
+[2026-03-08 05:47:32] START: pitch+mcadams sw12 | runlog=results\automation_logs\list3_speaker4_pitch+mcadams_sw12_runlog.txt
+[2026-03-08 05:52:22] DONE: pitch+mcadams sw11 | 292.3s (exit_code=0)
+[2026-03-08 05:52:22] DONE: pitch+mcadams sw12 | 290.3s (exit_code=0)
+[2026-03-08 05:52:22] START: pitch+mcadams sw13 | runlog=results\automation_logs\list3_speaker4_pitch+mcadams_sw13_runlog.txt
+[2026-03-08 05:52:22] START: pitch+mcadams sw14 | runlog=results\automation_logs\list3_speaker4_pitch+mcadams_sw14_runlog.txt
+[2026-03-08 05:57:12] DONE: pitch+mcadams sw14 | 290.2s (exit_code=0)
+[2026-03-08 05:57:12] START: pitch+mcadams sw15 | runlog=results\automation_logs\list3_speaker4_pitch+mcadams_sw15_runlog.txt
+[2026-03-08 05:57:18] DONE: pitch+mcadams sw13 | 296.3s (exit_code=0)
+[2026-03-08 05:57:18] START: formant+mcadams sw3 | runlog=results\automation_logs\list3_speaker4_formant+mcadams_sw3_runlog.txt
+[2026-03-08 06:02:02] DONE: pitch+mcadams sw15 | 290.3s (exit_code=0)
+[2026-03-08 06:02:02] START: formant+mcadams sw4 | runlog=results\automation_logs\list3_speaker4_formant+mcadams_sw4_runlog.txt
+[2026-03-08 06:02:06] DONE: formant+mcadams sw3 | 288.3s (exit_code=0)
+[2026-03-08 06:02:06] START: formant+mcadams sw5 | runlog=results\automation_logs\list3_speaker4_formant+mcadams_sw5_runlog.txt
+[2026-03-08 06:06:57] DONE: formant+mcadams sw4 | 294.4s (exit_code=0)
+[2026-03-08 06:06:57] START: formant+mcadams sw6 | runlog=results\automation_logs\list3_speaker4_formant+mcadams_sw6_runlog.txt
+[2026-03-08 06:06:59] DONE: formant+mcadams sw5 | 292.4s (exit_code=0)
+[2026-03-08 06:06:59] START: formant+mcadams sw7 | runlog=results\automation_logs\list3_speaker4_formant+mcadams_sw7_runlog.txt
+[2026-03-08 06:11:47] DONE: formant+mcadams sw6 | 290.4s (exit_code=0)
+[2026-03-08 06:11:47] DONE: formant+mcadams sw7 | 288.3s (exit_code=0)
+[2026-03-08 06:11:47] START: formant+mcadams sw8 | runlog=results\automation_logs\list3_speaker4_formant+mcadams_sw8_runlog.txt
+[2026-03-08 06:11:47] START: formant+mcadams sw9 | runlog=results\automation_logs\list3_speaker4_formant+mcadams_sw9_runlog.txt
+[2026-03-08 06:16:41] DONE: formant+mcadams sw8 | 294.3s (exit_code=0)
+[2026-03-08 06:16:41] START: formant+mcadams sw10 | runlog=results\automation_logs\list3_speaker4_formant+mcadams_sw10_runlog.txt
+[2026-03-08 06:16:43] DONE: formant+mcadams sw9 | 296.3s (exit_code=0)
+[2026-03-08 06:16:43] START: formant+mcadams sw11 | runlog=results\automation_logs\list3_speaker4_formant+mcadams_sw11_runlog.txt
+[2026-03-08 06:21:34] DONE: formant+mcadams sw10 | 292.3s (exit_code=0)
+[2026-03-08 06:21:34] DONE: formant+mcadams sw11 | 290.3s (exit_code=0)
+[2026-03-08 06:21:34] START: formant+mcadams sw12 | runlog=results\automation_logs\list3_speaker4_formant+mcadams_sw12_runlog.txt
+[2026-03-08 06:21:34] START: formant+mcadams sw13 | runlog=results\automation_logs\list3_speaker4_formant+mcadams_sw13_runlog.txt
+[2026-03-08 06:26:24] DONE: formant+mcadams sw12 | 290.3s (exit_code=0)
+[2026-03-08 06:26:24] DONE: formant+mcadams sw13 | 290.3s (exit_code=0)
+[2026-03-08 06:26:24] START: formant+mcadams sw14 | runlog=results\automation_logs\list3_speaker4_formant+mcadams_sw14_runlog.txt
+[2026-03-08 06:26:24] START: formant+mcadams sw15 | runlog=results\automation_logs\list3_speaker4_formant+mcadams_sw15_runlog.txt
+[2026-03-08 06:31:13] DONE: formant+mcadams sw14 | 288.4s (exit_code=0)
+[2026-03-08 06:31:13] START: pitch+formant+mcadams sw3 | runlog=results\automation_logs\list3_speaker4_pitch+formant+mcadams_sw3_runlog.txt
+[2026-03-08 06:31:17] DONE: formant+mcadams sw15 | 292.4s (exit_code=0)
+[2026-03-08 06:31:17] START: pitch+formant+mcadams sw4 | runlog=results\automation_logs\list3_speaker4_pitch+formant+mcadams_sw4_runlog.txt
+[2026-03-08 06:36:09] DONE: pitch+formant+mcadams sw3 | 296.3s (exit_code=0)
+[2026-03-08 06:36:09] START: pitch+formant+mcadams sw5 | runlog=results\automation_logs\list3_speaker4_pitch+formant+mcadams_sw5_runlog.txt
+[2026-03-08 06:36:13] DONE: pitch+formant+mcadams sw4 | 296.3s (exit_code=0)
+[2026-03-08 06:36:13] START: pitch+formant+mcadams sw6 | runlog=results\automation_logs\list3_speaker4_pitch+formant+mcadams_sw6_runlog.txt
+[2026-03-08 06:41:03] DONE: pitch+formant+mcadams sw5 | 294.4s (exit_code=0)
+[2026-03-08 06:41:03] START: pitch+formant+mcadams sw7 | runlog=results\automation_logs\list3_speaker4_pitch+formant+mcadams_sw7_runlog.txt
+[2026-03-08 06:41:05] DONE: pitch+formant+mcadams sw6 | 292.4s (exit_code=0)
+[2026-03-08 06:41:05] START: pitch+formant+mcadams sw8 | runlog=results\automation_logs\list3_speaker4_pitch+formant+mcadams_sw8_runlog.txt
+[2026-03-08 06:45:48] DONE: pitch+formant+mcadams sw7 | 284.3s (exit_code=0)
+[2026-03-08 06:45:48] START: pitch+formant+mcadams sw9 | runlog=results\automation_logs\list3_speaker4_pitch+formant+mcadams_sw9_runlog.txt
+[2026-03-08 06:45:54] DONE: pitch+formant+mcadams sw8 | 288.3s (exit_code=0)
+[2026-03-08 06:45:54] START: pitch+formant+mcadams sw10 | runlog=results\automation_logs\list3_speaker4_pitch+formant+mcadams_sw10_runlog.txt
+[2026-03-08 06:50:42] DONE: pitch+formant+mcadams sw9 | 294.4s (exit_code=0)
+[2026-03-08 06:50:42] START: pitch+formant+mcadams sw11 | runlog=results\automation_logs\list3_speaker4_pitch+formant+mcadams_sw11_runlog.txt
+[2026-03-08 06:50:48] DONE: pitch+formant+mcadams sw10 | 294.4s (exit_code=0)
+[2026-03-08 06:50:48] START: pitch+formant+mcadams sw12 | runlog=results\automation_logs\list3_speaker4_pitch+formant+mcadams_sw12_runlog.txt
+[2026-03-08 06:55:36] DONE: pitch+formant+mcadams sw11 | 294.4s (exit_code=0)
+[2026-03-08 06:55:36] START: pitch+formant+mcadams sw13 | runlog=results\automation_logs\list3_speaker4_pitch+formant+mcadams_sw13_runlog.txt
+[2026-03-08 06:55:38] DONE: pitch+formant+mcadams sw12 | 290.4s (exit_code=0)
+[2026-03-08 06:55:38] START: pitch+formant+mcadams sw14 | runlog=results\automation_logs\list3_speaker4_pitch+formant+mcadams_sw14_runlog.txt
+[2026-03-08 07:00:29] DONE: pitch+formant+mcadams sw13 | 292.4s (exit_code=0)
+[2026-03-08 07:00:29] START: pitch+formant+mcadams sw15 | runlog=results\automation_logs\list3_speaker4_pitch+formant+mcadams_sw15_runlog.txt
+[2026-03-08 07:00:41] DONE: pitch+formant+mcadams sw14 | 302.4s (exit_code=0)
+[2026-03-08 07:03:35] DONE: pitch+formant+mcadams sw15 | 186.0s (exit_code=0)
+[2026-03-08 07:03:35] 
+[2026-03-08 07:03:35] === Automation run finished ===
+[2026-03-08 07:03:35] Started: 91
+[2026-03-08 07:03:35] Completed (process finished): 83
+[2026-03-08 07:03:35] Skipped or missing: 0
+[2026-03-08 07:03:35] Crashed or timed out: 8
+[2026-03-08 07:03:35] Master log: results\automation_run_log.txt
+[2026-03-08 07:03:35] Per-run logs: results\automation_logs\*_runlog.txt

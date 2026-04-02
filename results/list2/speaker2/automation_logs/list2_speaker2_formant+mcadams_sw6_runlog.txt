@@ -1,0 +1,31 @@
+[2026-03-05 20:21:55] START formant+mcadams sw6
+CMD: C:\Users\adolf\AppData\Local\Programs\Python\Python312\python.exe -u eval_anonymization.py --input_wav audio\list2_speaker2_formant+mcadams_sw6_in.wav --output_wav audio\list2_speaker2_formant+mcadams_sw6_out.wav --impostors_dir impostors --whisper_model base --max_impostors 146
+
+Log file: results\list2_speaker2_formant+mcadams_sw6_metrics.txt
+Device: cpu
+Input WAV:  audio\list2_speaker2_formant+mcadams_sw6_in.wav
+Output WAV: audio\list2_speaker2_formant+mcadams_sw6_out.wav
+Impostors dir: impostors | max_impostors=146
+Whisper model: base
+Chunking: chunk_sec=3.0, hop_sec=0.5
+
+Loading Whisper model 'base'...
+Whisper loaded.
+Transcribing input...
+Transcribing output...
+
+=== ASR TRANSCRIPTS ===
+[input ASR]  The boy was there when the sun rose. A rod is used to catch pink salmon. The source of the huge river is the clear spring. Kick the ball straight and follow through. Help the woman get back to her feet. A pot of tea helps to pass the evening. Smokey fires lack flame and heat. The soft cushion broke the man's fall. The salt breeze came across from the sea. The girl at the booth sold 50 bonds.
+Traceback (most recent call last):
+  File "C:\Users\adolf\Downloads\es100\eval_anonymization.py", line 434, in <module>
+    main()
+  File "C:\Users\adolf\Downloads\es100\eval_anonymization.py", line 345, in main
+    log(f"[output ASR] {out_text}")
+  File "C:\Users\adolf\Downloads\es100\eval_anonymization.py", line 84, in log
+    print(msg, flush=True)
+  File "C:\Users\adolf\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 934-935: character maps to <undefined>
+
+[2026-03-05 20:22:27] CRASH after 32.0s. (exit_code=1)

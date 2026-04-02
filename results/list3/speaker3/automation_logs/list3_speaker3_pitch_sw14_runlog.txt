@@ -1,0 +1,83 @@
+[2026-03-09 10:07:36] START pitch sw14
+CMD: C:\Users\adolf\AppData\Local\Programs\Python\Python312\python.exe -u eval_anonymization.py --input_wav audio\list3_speaker3_pitch_sw14_in.wav --output_wav audio\list3_speaker3_pitch_sw14_out.wav --impostors_dir impostors --whisper_model base --max_impostors 146
+
+Log file: results\list3_speaker3_pitch_sw14_metrics.txt
+Device: cpu
+Input WAV:  audio\list3_speaker3_pitch_sw14_in.wav
+Output WAV: audio\list3_speaker3_pitch_sw14_out.wav
+Impostors dir: impostors | max_impostors=146
+Whisper model: base
+Chunking: chunk_sec=3.0, hop_sec=0.5
+
+Loading Whisper model 'base'...
+Whisper loaded.
+Transcribing input...
+Transcribing output...
+
+=== ASR TRANSCRIPTS ===
+[input ASR]  The spa pup nod a hole in the sock. The fish twisted and turned on the bent hook. Press the pants and so a button on the vest. The swan die was far short of perfect. The beauty of the view stunned the young boy. Two blue fish swam in the tank. Her purse was full of useless trash. The coat reared and threw the tall rider. Snowed, rained, inhaled the same morning. Reduverse out loud for pleasure.
+[output ASR] The spa pup nod a hole in the sock. The fish twisted and turned on the bent hook. Press the pants and sew a button on the vest. The swan die was far short of perfect. The beauty of the view stunned the young boy. Two blue fish swam in the tank. Her purse was full of useless trash. The coat reared and threw the tall rider. Snowed, rained, inhaled the same morning. Read verse out loud for pleasure.
+
+=== WER BREAKDOWN ===
+WER = (S + D + I) / N, where N = #words in reference
+S (substitutions): 2
+D (deletions):     0
+I (insertions):    1
+N (ref words):     78
+WER = (2 + 0 + 1) / 78 = 0.0385
+
+Loading speaker embedding model (SpeechBrain ECAPA)...
+C:\Users\adolf\AppData\Local\Programs\Python\Python312\Lib\site-packages\speechbrain\utils\autocast.py:188: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  wrapped_fwd = torch.cuda.amp.custom_fwd(fwd, cast_inputs=cast_inputs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Speaker model loaded.
+Loading + chunking input/output audio for embeddings...
+Input chunks: 66 | Output chunks: 66
+Embedding input chunks (enrollment + baseline)...
+Embedding output chunks (anon scores)...
+Embedding 146 impostor files...
+  impostors: 10/146
+  impostors: 20/146
+  impostors: 30/146
+  impostors: 40/146
+  impostors: 50/146
+  impostors: 60/146
+  impostors: 70/146
+  impostors: 80/146
+  impostors: 90/146
+  impostors: 100/146
+  impostors: 110/146
+  impostors: 120/146
+  impostors: 130/146
+  impostors: 140/146
+  impostors: 146/146
+
+=== SCORE STATISTICS (cosine similarity) ===
+Baseline genuine: n=66, mean=0.7569, std=0.0576, min=0.6143, max=0.8660
+Anon genuine:     n=66, mean=0.2374, std=0.0330, min=0.1678, max=0.3115
+Impostor:         n=146, mean=0.0707, std=0.0871, min=-0.1054, max=0.3829
+
+Computing EER (threshold sweep)...
+
+=== BASELINE (input vs input) EER DETAILS ===
+Chosen threshold t*: 0.6143
+Genuine trials N:    66
+Impostor trials M:   146
+False rejects:       0  -> FRR = 0.00%
+False accepts:       0  -> FAR = 0.00%
+|FAR - FRR|:         0.00%
+EER = (FAR + FRR)/2  = (0.00% + 0.00%)/2 = 0.00%
+
+=== ANON (input vs output) EER DETAILS ===
+Chosen threshold t*: 0.1935
+Genuine trials N:    66
+Impostor trials M:   146
+False rejects:       5  -> FRR = 7.58%
+False accepts:       10  -> FAR = 6.85%
+|FAR - FRR|:         0.73%
+EER = (FAR + FRR)/2  = (6.85% + 7.58%)/2 = 7.21%
+
+Done.
+Saved results to: results\list3_speaker3_pitch_sw14_metrics.txt
+
+[2026-03-09 10:12:27] DONE after 290.5s. (exit_code=0)

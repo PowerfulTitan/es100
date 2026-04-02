@@ -1,0 +1,82 @@
+[2026-03-09 01:45:43] START pitch+formant sw13
+CMD: C:\Users\adolf\AppData\Local\Programs\Python\Python312\python.exe -u eval_anonymization.py --input_wav audio\list3_speaker2_pitch+formant_sw13_in.wav --output_wav audio\list3_speaker2_pitch+formant_sw13_out.wav --impostors_dir impostors --whisper_model base --max_impostors 146
+
+Log file: results\list3_speaker2_pitch+formant_sw13_metrics.txt
+Device: cpu
+Input WAV:  audio\list3_speaker2_pitch+formant_sw13_in.wav
+Output WAV: audio\list3_speaker2_pitch+formant_sw13_out.wav
+Impostors dir: impostors | max_impostors=146
+Whisper model: base
+Chunking: chunk_sec=3.0, hop_sec=0.5
+
+Loading Whisper model 'base'...
+Whisper loaded.
+Transcribing input...
+Transcribing output...
+
+=== ASR TRANSCRIPTS ===
+[input ASR]  The small pup nod a hole in the sock. The fish twisted and turned on the bent hook. Press the pants and sue a button on the vest. The swan dive was far short of perfect. The button of the view stunned the young boy. Two blue fish swam in the tank. Her purse was full of useless trash. The cold reared and threw the tall rider. Its snowed, rained and hailed the same morning. The status turned different now.
+[output ASR] The small pup nod a hole in the sock. The fish twisted and turned on the bent hook. Press the pants and sew a button on the vest. The swan dive was far shore of perfect. The button of the view stunned the young boy. Two blue fish swam in the tank. Her purse was full of useless trash. The cold reared and threw the tall rider. Its node rained and hailed the same morning. The reed of the vest out loud for pleasure.
+
+=== WER BREAKDOWN ===
+WER = (S + D + I) / N, where N = #words in reference
+S (substitutions): 7
+D (deletions):     0
+I (insertions):    4
+N (ref words):     80
+WER = (7 + 0 + 4) / 80 = 0.1375
+
+Loading speaker embedding model (SpeechBrain ECAPA)...
+C:\Users\adolf\AppData\Local\Programs\Python\Python312\Lib\site-packages\speechbrain\utils\autocast.py:188: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  wrapped_fwd = torch.cuda.amp.custom_fwd(fwd, cast_inputs=cast_inputs)
+Speaker model loaded.
+Loading + chunking input/output audio for embeddings...
+Input chunks: 61 | Output chunks: 61
+Embedding input chunks (enrollment + baseline)...
+Embedding output chunks (anon scores)...
+Embedding 146 impostor files...
+  impostors: 10/146
+  impostors: 20/146
+  impostors: 30/146
+  impostors: 40/146
+  impostors: 50/146
+  impostors: 60/146
+  impostors: 70/146
+  impostors: 80/146
+  impostors: 90/146
+  impostors: 100/146
+  impostors: 110/146
+  impostors: 120/146
+  impostors: 130/146
+  impostors: 140/146
+  impostors: 146/146
+
+=== SCORE STATISTICS (cosine similarity) ===
+Baseline genuine: n=61, mean=0.8051, std=0.1129, min=0.1528, max=0.8856
+Anon genuine:     n=61, mean=0.2893, std=0.0464, min=0.1653, max=0.3864
+Impostor:         n=146, mean=0.0940, std=0.0900, min=-0.0905, max=0.3313
+
+Computing EER (threshold sweep)...
+
+=== BASELINE (input vs input) EER DETAILS ===
+Chosen threshold t*: 0.3123
+Genuine trials N:    61
+Impostor trials M:   146
+False rejects:       1  -> FRR = 1.64%
+False accepts:       2  -> FAR = 1.37%
+|FAR - FRR|:         0.27%
+EER = (FAR + FRR)/2  = (1.37% + 1.64%)/2 = 1.50%
+
+=== ANON (input vs output) EER DETAILS ===
+Chosen threshold t*: 0.2263
+Genuine trials N:    61
+Impostor trials M:   146
+False rejects:       5  -> FRR = 8.20%
+False accepts:       12  -> FAR = 8.22%
+|FAR - FRR|:         0.02%
+EER = (FAR + FRR)/2  = (8.22% + 8.20%)/2 = 8.21%
+
+Done.
+Saved results to: results\list3_speaker2_pitch+formant_sw13_metrics.txt
+
+[2026-03-09 01:50:44] DONE after 300.4s. (exit_code=0)

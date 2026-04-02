@@ -1,0 +1,82 @@
+[2026-03-07 01:21:42] START pitch sw5
+CMD: C:\Users\adolf\AppData\Local\Programs\Python\Python312\python.exe -u eval_anonymization.py --input_wav audio\list2_speaker3_pitch_sw5_in.wav --output_wav audio\list2_speaker3_pitch_sw5_out.wav --impostors_dir impostors --whisper_model base --max_impostors 146
+
+Log file: results\list2_speaker3_pitch_sw5_metrics.txt
+Device: cpu
+Input WAV:  audio\list2_speaker3_pitch_sw5_in.wav
+Output WAV: audio\list2_speaker3_pitch_sw5_out.wav
+Impostors dir: impostors | max_impostors=146
+Whisper model: base
+Chunking: chunk_sec=3.0, hop_sec=0.5
+
+Loading Whisper model 'base'...
+Whisper loaded.
+Transcribing input...
+Transcribing output...
+
+=== ASR TRANSCRIPTS ===
+[input ASR]  The boy was there when the sun rose. A rod is used to catch pink salmon. The source of the huge river is the clear spring. Kick the ball straight and follow through. Help the woman get back to her feet. A pot of tea helps to pass the evening. Smoky fires lacked flame and heat. The soft cushion broke the man's fall. The salt breeze came across from the sea. The girl at the booth sold 50 bonds.
+[output ASR] The boy was there when the sun rose. A rod is used to catch pink salmon. The source of the huge river is the clear spring. Kick the ball straight and follow through. Help the woman get back to her feet. A pot of tea helps to pass the evening. Smoky fires lacked flame in heat. The soft cushion broke the man's fall. The salt breeze came across from the sea. The girl at the boot sold 50 bonds.
+
+=== WER BREAKDOWN ===
+WER = (S + D + I) / N, where N = #words in reference
+S (substitutions): 2
+D (deletions):     0
+I (insertions):    0
+N (ref words):     79
+WER = (2 + 0 + 0) / 79 = 0.0253
+
+Loading speaker embedding model (SpeechBrain ECAPA)...
+C:\Users\adolf\AppData\Local\Programs\Python\Python312\Lib\site-packages\speechbrain\utils\autocast.py:188: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  wrapped_fwd = torch.cuda.amp.custom_fwd(fwd, cast_inputs=cast_inputs)
+Speaker model loaded.
+Loading + chunking input/output audio for embeddings...
+Input chunks: 64 | Output chunks: 64
+Embedding input chunks (enrollment + baseline)...
+Embedding output chunks (anon scores)...
+Embedding 146 impostor files...
+  impostors: 10/146
+  impostors: 20/146
+  impostors: 30/146
+  impostors: 40/146
+  impostors: 50/146
+  impostors: 60/146
+  impostors: 70/146
+  impostors: 80/146
+  impostors: 90/146
+  impostors: 100/146
+  impostors: 110/146
+  impostors: 120/146
+  impostors: 130/146
+  impostors: 140/146
+  impostors: 146/146
+
+=== SCORE STATISTICS (cosine similarity) ===
+Baseline genuine: n=64, mean=0.7733, std=0.0529, min=0.5935, max=0.8555
+Anon genuine:     n=64, mean=0.2984, std=0.0427, min=0.2102, max=0.3890
+Impostor:         n=146, mean=0.0707, std=0.0907, min=-0.1437, max=0.4021
+
+Computing EER (threshold sweep)...
+
+=== BASELINE (input vs input) EER DETAILS ===
+Chosen threshold t*: 0.5935
+Genuine trials N:    64
+Impostor trials M:   146
+False rejects:       0  -> FRR = 0.00%
+False accepts:       0  -> FAR = 0.00%
+|FAR - FRR|:         0.00%
+EER = (FAR + FRR)/2  = (0.00% + 0.00%)/2 = 0.00%
+
+=== ANON (input vs output) EER DETAILS ===
+Chosen threshold t*: 0.2217
+Genuine trials N:    64
+Impostor trials M:   146
+False rejects:       2  -> FRR = 3.12%
+False accepts:       5  -> FAR = 3.42%
+|FAR - FRR|:         0.30%
+EER = (FAR + FRR)/2  = (3.42% + 3.12%)/2 = 3.27%
+
+Done.
+Saved results to: results\list2_speaker3_pitch_sw5_metrics.txt
+
+[2026-03-07 01:26:28] DONE after 286.2s. (exit_code=0)

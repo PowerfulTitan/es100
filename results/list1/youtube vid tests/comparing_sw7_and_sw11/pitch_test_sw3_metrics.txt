@@ -1,0 +1,11 @@
+Log file: results\pitch_test_sw3_metrics.txt
+Device: cpu
+Input WAV:  audio\pitch_test_sw3_in.wav
+Output WAV: audio\pitch_test_sw3_out.wav
+Impostors dir: impostors | max_impostors=146
+Whisper model: base
+Chunking: chunk_sec=3.0, hop_sec=0.5
+
+Loading Whisper model 'base'...
+Whisper loaded.
+Transcribing input...

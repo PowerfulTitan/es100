@@ -1,0 +1,83 @@
+[2026-03-09 12:59:07] START pitch+formant+mcadams sw7
+CMD: C:\Users\adolf\AppData\Local\Programs\Python\Python312\python.exe -u eval_anonymization.py --input_wav audio\list3_speaker3_pitch+formant+mcadams_sw7_in.wav --output_wav audio\list3_speaker3_pitch+formant+mcadams_sw7_out.wav --impostors_dir impostors --whisper_model base --max_impostors 146
+
+Log file: results\list3_speaker3_pitch+formant+mcadams_sw7_metrics.txt
+Device: cpu
+Input WAV:  audio\list3_speaker3_pitch+formant+mcadams_sw7_in.wav
+Output WAV: audio\list3_speaker3_pitch+formant+mcadams_sw7_out.wav
+Impostors dir: impostors | max_impostors=146
+Whisper model: base
+Chunking: chunk_sec=3.0, hop_sec=0.5
+
+Loading Whisper model 'base'...
+Whisper loaded.
+Transcribing input...
+Transcribing output...
+
+=== ASR TRANSCRIPTS ===
+[input ASR]  The spa-pup nod a hole in the sock. The fish twisted and turned on the bent hook. Press the pants and so a button on the vest. The swan die was far short of perfect. The beauty of the view stunned the young boy. Two blue fish swam in the tank. Her purse was full of useless trash. The coat reared and threw the tall rider. The snowed, rained, inhaled the same morning. Re-diverse out loud for pleasure.
+[output ASR] The song was not a fool in the song. The face twisted and turned on the fence of a crack. Cren't pants and so on but in on the fence. The swan die was far short of her. The beauty of the view suddenly unbored. Two blue faces swept in the tank. The face was full of useless trash. The cold, weird and through the tall rider. It's snowed and rained in the hailed same morning. Green of verse out loud for pleasure.
+
+=== WER BREAKDOWN ===
+WER = (S + D + I) / N, where N = #words in reference
+S (substitutions): 25
+D (deletions):     2
+I (insertions):    7
+N (ref words):     78
+WER = (25 + 2 + 7) / 78 = 0.4359
+
+Loading speaker embedding model (SpeechBrain ECAPA)...
+C:\Users\adolf\AppData\Local\Programs\Python\Python312\Lib\site-packages\speechbrain\utils\autocast.py:188: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  wrapped_fwd = torch.cuda.amp.custom_fwd(fwd, cast_inputs=cast_inputs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Speaker model loaded.
+Loading + chunking input/output audio for embeddings...
+Input chunks: 66 | Output chunks: 66
+Embedding input chunks (enrollment + baseline)...
+Embedding output chunks (anon scores)...
+Embedding 146 impostor files...
+  impostors: 10/146
+  impostors: 20/146
+  impostors: 30/146
+  impostors: 40/146
+  impostors: 50/146
+  impostors: 60/146
+  impostors: 70/146
+  impostors: 80/146
+  impostors: 90/146
+  impostors: 100/146
+  impostors: 110/146
+  impostors: 120/146
+  impostors: 130/146
+  impostors: 140/146
+  impostors: 146/146
+
+=== SCORE STATISTICS (cosine similarity) ===
+Baseline genuine: n=66, mean=0.7565, std=0.0586, min=0.6449, max=0.8679
+Anon genuine:     n=66, mean=0.4184, std=0.0765, min=0.2569, max=0.5651
+Impostor:         n=146, mean=0.0676, std=0.0881, min=-0.1133, max=0.3844
+
+Computing EER (threshold sweep)...
+
+=== BASELINE (input vs input) EER DETAILS ===
+Chosen threshold t*: 0.6449
+Genuine trials N:    66
+Impostor trials M:   146
+False rejects:       0  -> FRR = 0.00%
+False accepts:       0  -> FAR = 0.00%
+|FAR - FRR|:         0.00%
+EER = (FAR + FRR)/2  = (0.00% + 0.00%)/2 = 0.00%
+
+=== ANON (input vs output) EER DETAILS ===
+Chosen threshold t*: 0.3001
+Genuine trials N:    66
+Impostor trials M:   146
+False rejects:       1  -> FRR = 1.52%
+False accepts:       2  -> FAR = 1.37%
+|FAR - FRR|:         0.15%
+EER = (FAR + FRR)/2  = (1.37% + 1.52%)/2 = 1.44%
+
+Done.
+Saved results to: results\list3_speaker3_pitch+formant+mcadams_sw7_metrics.txt
+
+[2026-03-09 13:03:55] DONE after 288.4s. (exit_code=0)

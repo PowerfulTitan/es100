@@ -1,0 +1,82 @@
+[2026-03-07 03:59:25] START formant+mcadams sw7
+CMD: C:\Users\adolf\AppData\Local\Programs\Python\Python312\python.exe -u eval_anonymization.py --input_wav audio\list2_speaker3_formant+mcadams_sw7_in.wav --output_wav audio\list2_speaker3_formant+mcadams_sw7_out.wav --impostors_dir impostors --whisper_model base --max_impostors 146
+
+Log file: results\list2_speaker3_formant+mcadams_sw7_metrics.txt
+Device: cpu
+Input WAV:  audio\list2_speaker3_formant+mcadams_sw7_in.wav
+Output WAV: audio\list2_speaker3_formant+mcadams_sw7_out.wav
+Impostors dir: impostors | max_impostors=146
+Whisper model: base
+Chunking: chunk_sec=3.0, hop_sec=0.5
+
+Loading Whisper model 'base'...
+Whisper loaded.
+Transcribing input...
+Transcribing output...
+
+=== ASR TRANSCRIPTS ===
+[input ASR]  The boy was there when the sun rose. A rod is used to catch pink salmon. The source of the huge river is the clear spring. Kick the ball straight and follow through. Help the woman get back to her feet. A pot of tea helps to pass the evening. Smoky fires lacked flame and heat. The soft cushion broke the man's fall. The salt breeze came across from the sea. The girl at the booth sold 50 bonds.
+[output ASR] The one was there when the sun rose. A rod is used to catch pink salmon. The source of the huge river is the clear stream. Take the ball straight and follow through. Help the woman get back to her feet. A pot of tea helps the past evening. Stroke fires the last lane to meet. The soft cushioned broken man's fall. The salt trees came across from the sea. The girl had a boot of salt 50 bars.
+
+=== WER BREAKDOWN ===
+WER = (S + D + I) / N, where N = #words in reference
+S (substitutions): 18
+D (deletions):     2
+I (insertions):    2
+N (ref words):     79
+WER = (18 + 2 + 2) / 79 = 0.2785
+
+Loading speaker embedding model (SpeechBrain ECAPA)...
+C:\Users\adolf\AppData\Local\Programs\Python\Python312\Lib\site-packages\speechbrain\utils\autocast.py:188: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  wrapped_fwd = torch.cuda.amp.custom_fwd(fwd, cast_inputs=cast_inputs)
+Speaker model loaded.
+Loading + chunking input/output audio for embeddings...
+Input chunks: 64 | Output chunks: 64
+Embedding input chunks (enrollment + baseline)...
+Embedding output chunks (anon scores)...
+Embedding 146 impostor files...
+  impostors: 10/146
+  impostors: 20/146
+  impostors: 30/146
+  impostors: 40/146
+  impostors: 50/146
+  impostors: 60/146
+  impostors: 70/146
+  impostors: 80/146
+  impostors: 90/146
+  impostors: 100/146
+  impostors: 110/146
+  impostors: 120/146
+  impostors: 130/146
+  impostors: 140/146
+  impostors: 146/146
+
+=== SCORE STATISTICS (cosine similarity) ===
+Baseline genuine: n=64, mean=0.7769, std=0.0533, min=0.5964, max=0.8658
+Anon genuine:     n=64, mean=0.5532, std=0.0740, min=0.2802, max=0.7149
+Impostor:         n=146, mean=0.0713, std=0.0904, min=-0.1309, max=0.3931
+
+Computing EER (threshold sweep)...
+
+=== BASELINE (input vs input) EER DETAILS ===
+Chosen threshold t*: 0.5964
+Genuine trials N:    64
+Impostor trials M:   146
+False rejects:       0  -> FRR = 0.00%
+False accepts:       0  -> FAR = 0.00%
+|FAR - FRR|:         0.00%
+EER = (FAR + FRR)/2  = (0.00% + 0.00%)/2 = 0.00%
+
+=== ANON (input vs output) EER DETAILS ===
+Chosen threshold t*: 0.3370
+Genuine trials N:    64
+Impostor trials M:   146
+False rejects:       1  -> FRR = 1.56%
+False accepts:       2  -> FAR = 1.37%
+|FAR - FRR|:         0.19%
+EER = (FAR + FRR)/2  = (1.37% + 1.56%)/2 = 1.47%
+
+Done.
+Saved results to: results\list2_speaker3_formant+mcadams_sw7_metrics.txt
+
+[2026-03-07 04:04:12] DONE after 286.3s. (exit_code=0)

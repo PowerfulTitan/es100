@@ -1,0 +1,83 @@
+[2026-03-05 06:24:52] START pitch+formant+mcadams sw14
+CMD: C:\Users\adolf\AppData\Local\Programs\Python\Python312\python.exe -u eval_anonymization.py --input_wav audio\list1_speaker3_pitch+formant+mcadams_sw14_in.wav --output_wav audio\list1_speaker3_pitch+formant+mcadams_sw14_out.wav --impostors_dir impostors --whisper_model base --max_impostors 146
+
+Log file: results\list1_speaker3_pitch+formant+mcadams_sw14_metrics.txt
+Device: cpu
+Input WAV:  audio\list1_speaker3_pitch+formant+mcadams_sw14_in.wav
+Output WAV: audio\list1_speaker3_pitch+formant+mcadams_sw14_out.wav
+Impostors dir: impostors | max_impostors=146
+Whisper model: base
+Chunking: chunk_sec=3.0, hop_sec=0.5
+
+Loading Whisper model 'base'...
+Whisper loaded.
+Transcribing input...
+Transcribing output...
+
+=== ASR TRANSCRIPTS ===
+[input ASR]  The birch can be used later on the smooth planks. Glue the sheet to the dark blue background. It's easy to tell the depth of a well. These days a chicken leg is a rare dish. Rice is often served in round bowls. The juice of lemons makes fine punch. The box was thrown beside the parked truck. The hogs were fed chopped corn and garbage. Four hours of steady work faced us. A large size in stockings is hard to sell.
+[output ASR] The bird can move to the late on the smooth thanks. Move the sheep to the dark blue background. It is needed to tell the depth of the well. These days, the chicken bank is a rare dish. Rice is often served in round bowls. The juice of lemons makes fine plants. The box was thrown beside the park truck. The box was said to chop the poor new garbage. Four hours of sitting work pays us. The large side is knocking in hard to sound.
+
+=== WER BREAKDOWN ===
+WER = (S + D + I) / N, where N = #words in reference
+S (substitutions): 28
+D (deletions):     0
+I (insertions):    4
+N (ref words):     82
+WER = (28 + 0 + 4) / 82 = 0.3902
+
+Loading speaker embedding model (SpeechBrain ECAPA)...
+C:\Users\adolf\AppData\Local\Programs\Python\Python312\Lib\site-packages\speechbrain\utils\autocast.py:188: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  wrapped_fwd = torch.cuda.amp.custom_fwd(fwd, cast_inputs=cast_inputs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Speaker model loaded.
+Loading + chunking input/output audio for embeddings...
+Input chunks: 74 | Output chunks: 74
+Embedding input chunks (enrollment + baseline)...
+Embedding output chunks (anon scores)...
+Embedding 146 impostor files...
+  impostors: 10/146
+  impostors: 20/146
+  impostors: 30/146
+  impostors: 40/146
+  impostors: 50/146
+  impostors: 60/146
+  impostors: 70/146
+  impostors: 80/146
+  impostors: 90/146
+  impostors: 100/146
+  impostors: 110/146
+  impostors: 120/146
+  impostors: 130/146
+  impostors: 140/146
+  impostors: 146/146
+
+=== SCORE STATISTICS (cosine similarity) ===
+Baseline genuine: n=74, mean=0.6806, std=0.1931, min=0.0361, max=0.8545
+Anon genuine:     n=74, mean=0.1685, std=0.0600, min=-0.0441, max=0.2466
+Impostor:         n=146, mean=0.0854, std=0.0858, min=-0.1035, max=0.4338
+
+Computing EER (threshold sweep)...
+
+=== BASELINE (input vs input) EER DETAILS ===
+Chosen threshold t*: 0.1985
+Genuine trials N:    74
+Impostor trials M:   146
+False rejects:       6  -> FRR = 8.11%
+False accepts:       12  -> FAR = 8.22%
+|FAR - FRR|:         0.11%
+EER = (FAR + FRR)/2  = (8.22% + 8.11%)/2 = 8.16%
+
+=== ANON (input vs output) EER DETAILS ===
+Chosen threshold t*: 0.1449
+Genuine trials N:    74
+Impostor trials M:   146
+False rejects:       15  -> FRR = 20.27%
+False accepts:       30  -> FAR = 20.55%
+|FAR - FRR|:         0.28%
+EER = (FAR + FRR)/2  = (20.55% + 20.27%)/2 = 20.41%
+
+Done.
+Saved results to: results\list1_speaker3_pitch+formant+mcadams_sw14_metrics.txt
+
+[2026-03-05 06:29:51] DONE after 298.4s. (exit_code=0)

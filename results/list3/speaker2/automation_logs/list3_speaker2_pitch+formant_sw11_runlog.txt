@@ -1,0 +1,31 @@
+[2026-03-09 01:45:17] START pitch+formant sw11
+CMD: C:\Users\adolf\AppData\Local\Programs\Python\Python312\python.exe -u eval_anonymization.py --input_wav audio\list3_speaker2_pitch+formant_sw11_in.wav --output_wav audio\list3_speaker2_pitch+formant_sw11_out.wav --impostors_dir impostors --whisper_model base --max_impostors 146
+
+Log file: results\list3_speaker2_pitch+formant_sw11_metrics.txt
+Device: cpu
+Input WAV:  audio\list3_speaker2_pitch+formant_sw11_in.wav
+Output WAV: audio\list3_speaker2_pitch+formant_sw11_out.wav
+Impostors dir: impostors | max_impostors=146
+Whisper model: base
+Chunking: chunk_sec=3.0, hop_sec=0.5
+
+Loading Whisper model 'base'...
+Whisper loaded.
+Transcribing input...
+Transcribing output...
+
+=== ASR TRANSCRIPTS ===
+[input ASR]  The small pup nod a hole in the sock. The fish twisted and turned on the bent hook. Press the pants and sue a button on the vest. The swan dive was far short of perfect. The button of the view stunned the young boy. Two blue fish swam in the tank. Her purse was full of useless trash. The cold reared and threw the tall rider. Its node rained and hailed the same morning. Almost spilled sheik random tip.
+Traceback (most recent call last):
+  File "C:\Users\adolf\Downloads\es100\eval_anonymization.py", line 434, in <module>
+    main()
+  File "C:\Users\adolf\Downloads\es100\eval_anonymization.py", line 345, in main
+    log(f"[output ASR] {out_text}")
+  File "C:\Users\adolf\Downloads\es100\eval_anonymization.py", line 84, in log
+    print(msg, flush=True)
+  File "C:\Users\adolf\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 408-411: character maps to <undefined>
+
+[2026-03-09 01:45:39] CRASH after 22.0s. (exit_code=1)

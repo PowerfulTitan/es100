@@ -1,0 +1,82 @@
+[2026-03-05 04:14:20] START mcadams sw14
+CMD: C:\Users\adolf\AppData\Local\Programs\Python\Python312\python.exe -u eval_anonymization.py --input_wav audio\list1_speaker3_mcadams_sw14_in.wav --output_wav audio\list1_speaker3_mcadams_sw14_out.wav --impostors_dir impostors --whisper_model base --max_impostors 146
+
+Log file: results\list1_speaker3_mcadams_sw14_metrics.txt
+Device: cpu
+Input WAV:  audio\list1_speaker3_mcadams_sw14_in.wav
+Output WAV: audio\list1_speaker3_mcadams_sw14_out.wav
+Impostors dir: impostors | max_impostors=146
+Whisper model: base
+Chunking: chunk_sec=3.0, hop_sec=0.5
+
+Loading Whisper model 'base'...
+Whisper loaded.
+Transcribing input...
+Transcribing output...
+
+=== ASR TRANSCRIPTS ===
+[input ASR]  The bird can lose later on the smooth planks. Glue the sheet to the dark blue background. It's easy to tell the depth of a well. These days a chicken leg is a rare dish. Rice is often served in round bowls. The juice of lemons makes fine punch. The box was thrown beside the parked truck. The hogs were fed chopped corn and garbage. Four hours of steady work faced us. A large size in stockings is hard to sell.
+[output ASR] The bird can lose lead on the smooth thanks. Move the sheet to the dark blue background. It's easy to tell the depth of a well. These days a chicken leg is a rare dish. Rice is often served in round bowls. The juice of lemons makes fine punch. The box was thrown beside the part truck. The hogs were fed chopped corn and garbage. Four hours of studying work faced us. A large size in stockings is hard to sell.
+
+=== WER BREAKDOWN ===
+WER = (S + D + I) / N, where N = #words in reference
+S (substitutions): 5
+D (deletions):     0
+I (insertions):    0
+N (ref words):     81
+WER = (5 + 0 + 0) / 81 = 0.0617
+
+Loading speaker embedding model (SpeechBrain ECAPA)...
+C:\Users\adolf\AppData\Local\Programs\Python\Python312\Lib\site-packages\speechbrain\utils\autocast.py:188: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  wrapped_fwd = torch.cuda.amp.custom_fwd(fwd, cast_inputs=cast_inputs)
+Speaker model loaded.
+Loading + chunking input/output audio for embeddings...
+Input chunks: 75 | Output chunks: 75
+Embedding input chunks (enrollment + baseline)...
+Embedding output chunks (anon scores)...
+Embedding 146 impostor files...
+  impostors: 10/146
+  impostors: 20/146
+  impostors: 30/146
+  impostors: 40/146
+  impostors: 50/146
+  impostors: 60/146
+  impostors: 70/146
+  impostors: 80/146
+  impostors: 90/146
+  impostors: 100/146
+  impostors: 110/146
+  impostors: 120/146
+  impostors: 130/146
+  impostors: 140/146
+  impostors: 146/146
+
+=== SCORE STATISTICS (cosine similarity) ===
+Baseline genuine: n=75, mean=0.6776, std=0.2007, min=-0.0026, max=0.8543
+Anon genuine:     n=75, mean=0.5608, std=0.1684, min=0.0359, max=0.7166
+Impostor:         n=146, mean=0.0820, std=0.0860, min=-0.1058, max=0.4339
+
+Computing EER (threshold sweep)...
+
+=== BASELINE (input vs input) EER DETAILS ===
+Chosen threshold t*: 0.1912
+Genuine trials N:    75
+Impostor trials M:   146
+False rejects:       7  -> FRR = 9.33%
+False accepts:       14  -> FAR = 9.59%
+|FAR - FRR|:         0.26%
+EER = (FAR + FRR)/2  = (9.59% + 9.33%)/2 = 9.46%
+
+=== ANON (input vs output) EER DETAILS ===
+Chosen threshold t*: 0.1895
+Genuine trials N:    75
+Impostor trials M:   146
+False rejects:       8  -> FRR = 10.67%
+False accepts:       16  -> FAR = 10.96%
+|FAR - FRR|:         0.29%
+EER = (FAR + FRR)/2  = (10.96% + 10.67%)/2 = 10.81%
+
+Done.
+Saved results to: results\list1_speaker3_mcadams_sw14_metrics.txt
+
+[2026-03-05 04:19:25] DONE after 304.6s. (exit_code=0)

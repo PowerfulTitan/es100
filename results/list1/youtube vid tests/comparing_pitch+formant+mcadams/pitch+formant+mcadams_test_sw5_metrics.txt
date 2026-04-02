@@ -1,0 +1,75 @@
+Log file: results\pitch+formant+mcadams_test_sw5_metrics.txt
+Device: cpu
+Input WAV:  audio\pitch+formant+mcadams_test_sw5_in.wav
+Output WAV: audio\pitch+formant+mcadams_test_sw5_out.wav
+Impostors dir: impostors | max_impostors=146
+Whisper model: base
+Chunking: chunk_sec=3.0, hop_sec=0.5
+
+Loading Whisper model 'base'...
+Whisper loaded.
+Transcribing input...
+Transcribing output...
+
+=== ASR TRANSCRIPTS ===
+[input ASR]  Oh yeah, that's what I wanted to ask you about too. Did you ever talk to Jan? Okay. Right, well... Okay, well she's gonna have to talk to Bob because when I was talking to Peggy the other day...
+[output ASR] Oh yeah, I wanted to ask you about two on the Do you ever talk to Jan? Okay, right, well, okay, well she is gonna have to talk to Bob because when I was talking to Peggy the other day...
+
+=== WER BREAKDOWN ===
+WER = (S + D + I) / N, where N = #words in reference
+S (substitutions): 3
+D (deletions):     2
+I (insertions):    3
+N (ref words):     39
+WER = (3 + 2 + 3) / 39 = 0.2051
+
+Loading speaker embedding model (SpeechBrain ECAPA)...
+Speaker model loaded.
+Loading + chunking input/output audio for embeddings...
+Input chunks: 35 | Output chunks: 35
+Embedding input chunks (enrollment + baseline)...
+Embedding output chunks (anon scores)...
+Embedding 146 impostor files...
+  impostors: 10/146
+  impostors: 20/146
+  impostors: 30/146
+  impostors: 40/146
+  impostors: 50/146
+  impostors: 60/146
+  impostors: 70/146
+  impostors: 80/146
+  impostors: 90/146
+  impostors: 100/146
+  impostors: 110/146
+  impostors: 120/146
+  impostors: 130/146
+  impostors: 140/146
+  impostors: 146/146
+
+=== SCORE STATISTICS (cosine similarity) ===
+Baseline genuine: n=35, mean=0.6772, std=0.1561, min=0.1623, max=0.8571
+Anon genuine:     n=35, mean=0.1687, std=0.0475, min=0.0489, max=0.2437
+Impostor:         n=146, mean=0.0825, std=0.0793, min=-0.1435, max=0.3484
+
+Computing EER (threshold sweep)...
+
+=== BASELINE (input vs input) EER DETAILS ===
+Chosen threshold t*: 0.2529
+Genuine trials N:    35
+Impostor trials M:   146
+False rejects:       1  -> FRR = 2.86%
+False accepts:       4  -> FAR = 2.74%
+|FAR - FRR|:         0.12%
+EER = (FAR + FRR)/2  = (2.74% + 2.86%)/2 = 2.80%
+
+=== ANON (input vs output) EER DETAILS ===
+Chosen threshold t*: 0.1291
+Genuine trials N:    35
+Impostor trials M:   146
+False rejects:       9  -> FRR = 25.71%
+False accepts:       37  -> FAR = 25.34%
+|FAR - FRR|:         0.37%
+EER = (FAR + FRR)/2  = (25.34% + 25.71%)/2 = 25.53%
+
+Done.
+Saved results to: results\pitch+formant+mcadams_test_sw5_metrics.txt

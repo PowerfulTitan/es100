@@ -1,0 +1,75 @@
+Log file: results\list2_speaker2_mcadams_sw6_metrics.txt
+Device: cpu
+Input WAV:  audio\list2_speaker2_mcadams_sw6_in.wav
+Output WAV: audio\list2_speaker2_mcadams_sw6_out.wav
+Impostors dir: impostors | max_impostors=146
+Whisper model: base
+Chunking: chunk_sec=3.0, hop_sec=0.5
+
+Loading Whisper model 'base'...
+Whisper loaded.
+Transcribing input...
+Transcribing output...
+
+=== ASR TRANSCRIPTS ===
+[input ASR]  The boy was there when the sun rose. A rod is used to catch pink salmon. The source of the huge river is the clear spring. Kick the ball straight and follow through. Help the woman get back to her feet. A pot of tea helps to pass the evening. Smokey fires lack flame and heat. The soft cushion broke the man's fall. The salt breeze came across from the sea. The girl at the booth sold 50 bonds.
+[output ASR] The boy was there when the sun rose. A rod is used to catch pink salmon. The source of the huge river is the clear string. Kick the boss tree and follow the roof. Help the woman get back to her feet. A pot of tea helps to pass the evening. Smokey fires like tea and heat. The soft cushion broke the man's wall. The salt trees came across from the sea. The girl at the booth sold 50 bonds.
+
+=== WER BREAKDOWN ===
+WER = (S + D + I) / N, where N = #words in reference
+S (substitutions): 8
+D (deletions):     0
+I (insertions):    1
+N (ref words):     79
+WER = (8 + 0 + 1) / 79 = 0.1139
+
+Loading speaker embedding model (SpeechBrain ECAPA)...
+Speaker model loaded.
+Loading + chunking input/output audio for embeddings...
+Input chunks: 55 | Output chunks: 55
+Embedding input chunks (enrollment + baseline)...
+Embedding output chunks (anon scores)...
+Embedding 146 impostor files...
+  impostors: 10/146
+  impostors: 20/146
+  impostors: 30/146
+  impostors: 40/146
+  impostors: 50/146
+  impostors: 60/146
+  impostors: 70/146
+  impostors: 80/146
+  impostors: 90/146
+  impostors: 100/146
+  impostors: 110/146
+  impostors: 120/146
+  impostors: 130/146
+  impostors: 140/146
+  impostors: 146/146
+
+=== SCORE STATISTICS (cosine similarity) ===
+Baseline genuine: n=55, mean=0.8083, std=0.0597, min=0.5375, max=0.8860
+Anon genuine:     n=55, mean=0.5410, std=0.0910, min=0.2262, max=0.7261
+Impostor:         n=146, mean=0.0849, std=0.0905, min=-0.0897, max=0.3686
+
+Computing EER (threshold sweep)...
+
+=== BASELINE (input vs input) EER DETAILS ===
+Chosen threshold t*: 0.5375
+Genuine trials N:    55
+Impostor trials M:   146
+False rejects:       0  -> FRR = 0.00%
+False accepts:       0  -> FAR = 0.00%
+|FAR - FRR|:         0.00%
+EER = (FAR + FRR)/2  = (0.00% + 0.00%)/2 = 0.00%
+
+=== ANON (input vs output) EER DETAILS ===
+Chosen threshold t*: 0.2952
+Genuine trials N:    55
+Impostor trials M:   146
+False rejects:       1  -> FRR = 1.82%
+False accepts:       3  -> FAR = 2.05%
+|FAR - FRR|:         0.24%
+EER = (FAR + FRR)/2  = (2.05% + 1.82%)/2 = 1.94%
+
+Done.
+Saved results to: results\list2_speaker2_mcadams_sw6_metrics.txt

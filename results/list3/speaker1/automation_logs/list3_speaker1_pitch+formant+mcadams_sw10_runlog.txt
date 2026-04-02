@@ -1,0 +1,83 @@
+[2026-03-08 20:03:08] START pitch+formant+mcadams sw10
+CMD: C:\Users\adolf\AppData\Local\Programs\Python\Python312\python.exe -u eval_anonymization.py --input_wav audio\list3_speaker1_pitch+formant+mcadams_sw10_in.wav --output_wav audio\list3_speaker1_pitch+formant+mcadams_sw10_out.wav --impostors_dir impostors --whisper_model base --max_impostors 146
+
+Log file: results\list3_speaker1_pitch+formant+mcadams_sw10_metrics.txt
+Device: cpu
+Input WAV:  audio\list3_speaker1_pitch+formant+mcadams_sw10_in.wav
+Output WAV: audio\list3_speaker1_pitch+formant+mcadams_sw10_out.wav
+Impostors dir: impostors | max_impostors=146
+Whisper model: base
+Chunking: chunk_sec=3.0, hop_sec=0.5
+
+Loading Whisper model 'base'...
+Whisper loaded.
+Transcribing input...
+Transcribing output...
+
+=== ASR TRANSCRIPTS ===
+[input ASR]  The small pup nod a hole in the sock. The fish twisted and turned on the bent hook. Press the pants and sew a button on the vest. The swan dive was far short of perfect. The beauty of the view stunned the young boy. Two blue fish swam in the tank. Her purse was full of useless trash. The cold reared and threw the tall rider. Its snowed rained and hailed the same morning. Read verse out loud for pleasure.
+[output ASR] Let's not know what I'm doing in the talk. Let's finish with the end turn on the phone. Press the end and still button on the back. Let's one side before turn on the phone. The beauty of the view is suddenly unborked. The beauty of the view is when you can see the first one. The first one is the second. The first one is the rear and rear of the sole. No rain and hail the same morning. The third one is the second.
+
+=== WER BREAKDOWN ===
+WER = (S + D + I) / N, where N = #words in reference
+S (substitutions): 53
+D (deletions):     4
+I (insertions):    9
+N (ref words):     81
+WER = (53 + 4 + 9) / 81 = 0.8148
+
+Loading speaker embedding model (SpeechBrain ECAPA)...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+C:\Users\adolf\AppData\Local\Programs\Python\Python312\Lib\site-packages\speechbrain\utils\autocast.py:188: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  wrapped_fwd = torch.cuda.amp.custom_fwd(fwd, cast_inputs=cast_inputs)
+Speaker model loaded.
+Loading + chunking input/output audio for embeddings...
+Input chunks: 84 | Output chunks: 84
+Embedding input chunks (enrollment + baseline)...
+Embedding output chunks (anon scores)...
+Embedding 146 impostor files...
+  impostors: 10/146
+  impostors: 20/146
+  impostors: 30/146
+  impostors: 40/146
+  impostors: 50/146
+  impostors: 60/146
+  impostors: 70/146
+  impostors: 80/146
+  impostors: 90/146
+  impostors: 100/146
+  impostors: 110/146
+  impostors: 120/146
+  impostors: 130/146
+  impostors: 140/146
+  impostors: 146/146
+
+=== SCORE STATISTICS (cosine similarity) ===
+Baseline genuine: n=84, mean=0.6655, std=0.1628, min=0.0899, max=0.8433
+Anon genuine:     n=84, mean=0.0654, std=0.0663, min=-0.0853, max=0.2082
+Impostor:         n=146, mean=0.1145, std=0.0883, min=-0.0783, max=0.3582
+
+Computing EER (threshold sweep)...
+
+=== BASELINE (input vs input) EER DETAILS ===
+Chosen threshold t*: 0.2780
+Genuine trials N:    84
+Impostor trials M:   146
+False rejects:       5  -> FRR = 5.95%
+False accepts:       9  -> FAR = 6.16%
+|FAR - FRR|:         0.21%
+EER = (FAR + FRR)/2  = (6.16% + 5.95%)/2 = 6.06%
+
+=== ANON (input vs output) EER DETAILS ===
+Chosen threshold t*: 0.0829
+Genuine trials N:    84
+Impostor trials M:   146
+False rejects:       51  -> FRR = 60.71%
+False accepts:       89  -> FAR = 60.96%
+|FAR - FRR|:         0.24%
+EER = (FAR + FRR)/2  = (60.96% + 60.71%)/2 = 60.84%
+
+Done.
+Saved results to: results\list3_speaker1_pitch+formant+mcadams_sw10_metrics.txt
+
+[2026-03-08 20:08:32] DONE after 324.5s. (exit_code=0)
